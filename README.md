@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Typing Speed Test with Sound Effects and Leaderboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 Project Overview
+This is a **Typing Speed Test** built with **React**, where users can test their typing speed and accuracy. The project includes features like **difficulty levels, real-time WPM and accuracy calculation, a leaderboard, and sound effects for correct and incorrect typing**. The timer automatically stops when the user completes the given sentence.
 
-## Available Scripts
+## 🎯 Features
+- **Typing Test:** Type a randomly generated sentence.
+- **Difficulty Levels:** Choose between Easy, Medium, and Hard.
+- **Real-time Stats:** Displays WPM (Words Per Minute) and Accuracy.
+- **Leaderboard:** Stores top 3 highest WPM scores using Local Storage.
+- **Sound Effects:** Plays sound for incorrect typing (with mute/unmute option).
+- **Auto-Stop Timer:** Timer stops automatically upon sentence completion.
 
-In the project directory, you can run:
+## 🛠️ Tech Stack
+- **React.js** (Frontend framework)
+- **CSS** (Styling)
+- **Local Storage** (For leaderboard persistence)
+- **Mixkit** (For sound effects)
 
-### `npm start`
+## 📦 Installation & Setup
+1. **Clone the Repository:**
+   ```sh
+   git clone https://github.com/your-username/typing-speed-test.git
+   cd typing-speed-test
+   ```
+2. **Install Dependencies:**
+   ```sh
+   npm install
+   ```
+3. **Run the App:**
+   ```sh
+   npm start
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Deployment (GitHub Pages)
+1. Install `gh-pages`:
+   ```sh
+   npm install gh-pages --save-dev
+   ```
+2. Add the following lines in `package.json`:
+   ```json
+   "homepage": "https://your-username.github.io/typing-speed-test",
+   "scripts": {
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
+   }
+   ```
+3. Deploy to GitHub Pages:
+   ```sh
+   npm run deploy
+   ```
+4. Your app will be available at `https://your-username.github.io/typing-speed-test`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🔊 Adding Sound Effects
+1. Download sounds from **[Mixkit](https://mixkit.co/free-sound-effects/)**.
+2. Place the sound files in the `public/` folder (e.g., `public/incorrect.mp3`).
+3. Ensure the sound is loaded correctly in your React app:
+   ```js
+   const incorrectSound = new Audio("/incorrect.mp3");
+   ```
 
-### `npm test`
+## 💡 Future Improvements
+- Add **custom text input** for user-selected sentences.
+- Include **theme switcher** (Dark/Light mode).
+- Implement **multiplayer mode** for competition.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📝 License
+This project is **open-source** and available under the **MIT License**.
 
-### `npm run build`
+## 💖 Acknowledgments
+- [Mixkit](https://mixkit.co/) for free sound effects.
+- [React](https://reactjs.org/) for the powerful frontend framework.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
+💻 **Happy Coding!** 🚀
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
